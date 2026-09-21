@@ -1,0 +1,95 @@
+/* SansTypo — the product site. One stylesheet, no build step. */
+:root {
+  color-scheme: light dark;
+  --ink: #101318;
+  --paper: #ffffff;
+  --muted: #667085;
+  --line: rgba(16, 19, 24, 0.12);
+  --blue: #0068d6;
+  --blue-fill: #0071e3;
+  --wash: #f6f7f9;
+  --mark: #ff4d5a;
+  --measure: 34rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #eceef2;
+    --paper: #0d0f13;
+    --muted: #98a2b3;
+    --line: rgba(236, 238, 242, 0.16);
+    --blue: #4aa3ff;
+    --blue-fill: #0a84ff;
+    --wash: #15181e;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.6 ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-feature-settings: "kern", "liga";
+}
+.page { max-width: 62rem; margin: 0 auto; padding: 0 1.5rem 5rem; }
+header.top { display: flex; align-items: baseline; gap: 1rem; padding: 2.2rem 0 0; }
+.word { font-size: 1.05rem; font-weight: 640; letter-spacing: -0.015em; }
+.word b { font-weight: 640; }
+.word .thin { font-weight: 300; color: var(--muted); }
+nav { margin-left: auto; display: flex; gap: 1.25rem; font-size: 0.92rem; }
+a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+nav a { color: var(--muted); text-decoration: none; }
+nav a:hover { color: var(--ink); }
+
+h1 {
+  font-size: clamp(2.1rem, 6vw, 3.4rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  font-weight: 660;
+  margin: 3.5rem 0 0;
+  max-width: 18ch;
+  text-wrap: balance;
+}
+.lead { font-size: 1.16rem; color: var(--muted); max-width: var(--measure); margin: 1.1rem 0 0; }
+/* The one flourish: the product's own underline, under a real misspelling. */
+.slip { position: relative; white-space: nowrap; color: var(--ink); }
+.slip::after {
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: -0.18em; height: 0.34em;
+  background: radial-gradient(circle at 0.25em 50%, var(--mark) 0.09em, transparent 0.1em) repeat-x;
+  background-size: 0.5em 100%;
+  opacity: 0.9;
+}
+h2 { font-size: 1.28rem; letter-spacing: -0.015em; margin: 3.4rem 0 0.2rem; }
+h3 { font-size: 1rem; margin: 0 0 0.25rem; }
+p { max-width: var(--measure); }
+.muted { color: var(--muted); }
+small, .small { font-size: 0.88rem; }
+
+.grid { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-top: 1.4rem; }
+@media (min-width: 46rem) { .grid.three { grid-template-columns: repeat(3, 1fr); } }
+.cell { background: var(--paper); padding: 1.1rem 1.15rem; }
+.cell p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+
+.get { display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; margin-top: 0.9rem; }
+.btn {
+  display: inline-block; background: var(--blue-fill); color: #fff; text-decoration: none;
+  padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.95rem; font-weight: 520;
+}
+.btn.quiet { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+.note { font-size: 0.88rem; color: var(--muted); }
+table { border-collapse: collapse; width: 100%; margin-top: 1rem; font-size: 0.95rem; }
+th, td { text-align: left; padding: 0.5rem 0.6rem 0.5rem 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-weight: 560; }
+td.state { color: var(--muted); white-space: nowrap; }
+code { font: 0.88em ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--wash); padding: 0.1em 0.35em; border-radius: 4px; }
+footer { margin-top: 4rem; padding-top: 1.2rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+footer a { color: var(--muted); }
+
+/* The policy reads as a document, not a landing page. */
+.doc { max-width: var(--measure); }
+.doc h2 { font-size: 1.05rem; margin: 2.2rem 0 0.3rem; }
+.doc p, .doc li { color: var(--ink); }
+.doc ul { padding-left: 1.1rem; }
+.doc li { margin: 0.25rem 0; }
+.stamp { color: var(--muted); font-size: 0.9rem; }

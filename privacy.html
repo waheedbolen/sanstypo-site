@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SansTypo — Privacy</title>
+    <meta name="description" content="The SansTypo browser extension sends nothing to anyone. It makes no network requests, has no server, no account and no analytics." />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="top">
+        <span class="word"><a href="index.html" style="color: inherit; text-decoration: none"><b>SansTypo</b></a></span>
+        <nav>
+          <a href="index.html#get">Download</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="index.html#support">Support</a>
+        </nav>
+      </header>
+
+      <div class="doc">
+        <h1 style="font-size: 1.9rem; margin-top: 2.6rem">Privacy</h1>
+        <p class="stamp">The SansTypo browser extension. Last updated 21 September 2026.</p>
+
+        <p>
+          <b>Short version: the extension sends nothing to us or to anyone else.</b> It makes no network requests at all. There is no server, no account
+          and no analytics.
+        </p>
+
+        <h2>What the extension reads</h2>
+        <p>
+          When it is checking a page, the extension reads the text in the field you are typing in, and the origin of the page you are on (for example
+          <code>https://example.com</code>). It does not read the rest of the page, and it does not read the path or the query string of the address, so
+          it does not know which page of a site you are on.
+        </p>
+        <p>
+          It never reads password fields, one-time code fields, or any field a site marks as card-number or password entry. It skips read-only and
+          disabled fields. It skips private and incognito windows unless you have explicitly turned that behaviour off in the SansTypo desktop
+          application.
+        </p>
+
+        <h2>Where that text goes</h2>
+        <p>
+          With no SansTypo desktop application installed, the text goes nowhere. The checking runs inside the extension, on your own computer, using a
+          small set of wording rules built into it.
+        </p>
+        <p>
+          With the SansTypo desktop application running, the text and the page’s origin are sent to that application over a connection to
+          <code>127.0.0.1</code> — your own computer, addressing itself. That connection cannot leave your machine. The application and the extension
+          prove a shared code to each other before any text is sent, so another program on your computer cannot receive it. The application checks the
+          text and sends back the corrections.
+        </p>
+        <p>Nothing is transmitted to us, and there is no “us” to transmit it to: the extension contains no address of any server.</p>
+
+        <h2>What the extension stores</h2>
+        <p>
+          Three values, in your browser’s local extension storage, on your device: whether the extension is switched on, the pairing code for the
+          desktop application, and a flag recording that a one-time explanation has been shown. None of it is synchronised to any account. No text you
+          type is stored.
+        </p>
+
+        <h2>What the extension does not do</h2>
+        <ul>
+          <li>It does not collect, sell, rent or share any personal information.</li>
+          <li>It does not use your data for anything other than checking the text you asked it to check.</li>
+          <li>It does not use your data to determine creditworthiness or for lending.</li>
+          <li>It does not show advertising and contains no advertising or tracking code.</li>
+          <li>It does not require an account and cannot be signed in to.</li>
+        </ul>
+
+        <h2>Site access</h2>
+        <p>
+          Installing the extension grants it access to no website. Until you choose “Allow All Sites” in its popup, it can read only the single page you
+          right-clicked in or opened the popup on, and only while you are on it. You can withdraw all-sites access at any time from your browser’s
+          extensions page, and the extension stops reading pages immediately when you do.
+        </p>
+
+        <h2>Children</h2>
+        <p>The extension is not directed at children and collects nothing from anyone.</p>
+
+        <h2>Changes</h2>
+        <p>If this ever changes, this page changes with it, and the change is disclosed in the extension before it takes effect.</p>
+
+        <h2>Contact</h2>
+        <p><a href="https://github.com/waheedbolen/sanstypo-site/issues">Open an issue</a> with anything about privacy, and it will be answered there in public.</p>
+      </div>
+
+      <footer>
+        <span>SansTypo</span>
+        <a href="index.html">Home</a>
+        <a href="https://github.com/waheedbolen/sanstypo-site/issues">Support</a>
+      </footer>
+    </div>
+  </body>
+</html>

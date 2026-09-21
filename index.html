@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SansTypo</title>
+    <meta name="description" content="SansTypo marks spelling and grammar mistakes in the text field you are typing in, in any app, and fixes them with a click. Everything runs on your own computer." />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="top">
+        <span class="word"><b>SansTypo</b></span>
+        <nav>
+          <a href="#get">Download</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="#support">Support</a>
+        </nav>
+      </header>
+
+      <h1>The typos nothing else can <span class="slip">see</span>.</h1>
+      <p class="lead">
+        SansTypo checks what you type in any app, and the words a spell checker can’t reach: text in a slide, a design, a PDF or a screenshot. Point at a
+        mistake and a card offers the fix.
+      </p>
+      <p class="lead">Everything happens on your own computer. Nothing is uploaded, and there is no account.</p>
+
+      <h2 id="get">Download</h2>
+      <p class="note">Version 0.1.0. Early builds: expect rough edges, and tell us what you find.</p>
+      <table>
+        <tr>
+          <th>Windows</th>
+          <td class="state">10 or 11, 64-bit</td>
+          <td><a href="https://github.com/waheedbolen/sanstypo-site/releases/download/v0.1.0/SansTypo-0.1.0-windows-x64.zip">SansTypo for Windows</a></td>
+        </tr>
+        <tr>
+          <th>Linux</th>
+          <td class="state">Intel or AMD</td>
+          <td><a href="https://github.com/waheedbolen/sanstypo-site/releases/download/v0.1.0/SansTypo-0.1.0-linux-x86_64.zip">.deb, .rpm and AppImage</a></td>
+        </tr>
+        <tr>
+          <th>Linux</th>
+          <td class="state">Arm</td>
+          <td><a href="https://github.com/waheedbolen/sanstypo-site/releases/download/v0.1.0/SansTypo-0.1.0-linux-arm64.zip">.deb, .rpm and AppImage</a></td>
+        </tr>
+        <tr>
+          <th>macOS</th>
+          <td class="state">12 or later</td>
+          <td class="muted">Coming shortly, once the build is notarised by Apple.</td>
+        </tr>
+      </table>
+      <p class="note">
+        Windows shows a warning for any installer without a code-signing certificate, which this one does not have yet: click <b>More info</b>, then
+        <b>Run anyway</b>. Each download’s checksum is listed with the release.
+      </p>
+
+      <h2>What it does</h2>
+      <div class="grid three">
+        <div class="cell">
+          <h3>As you type</h3>
+          <p>Mistakes get a wavy underline in any app. Point at one and a card offers the fix; one key accepts it.</p>
+        </div>
+        <div class="cell">
+          <h3>In pictures</h3>
+          <p>Press the shortcut and drag over text in a design, a slide or a screenshot. SansTypo reads the pixels and marks what it finds.</p>
+        </div>
+        <div class="cell">
+          <h3>In the browser</h3>
+          <p>The extension draws marks inside the page, so they scroll with the text, and tidies vague prompts in AI chat boxes.</p>
+        </div>
+      </div>
+
+      <h2>The browser extension</h2>
+      <p>It is on its way to each browser’s store. Until a store lists it, the app tells you where things stand.</p>
+      <table>
+        <tr><th>Chrome, Brave, Arc, Opera, Vivaldi</th><td class="state">Coming soon</td></tr>
+        <tr><th>Microsoft Edge</th><td class="state">Coming soon</td></tr>
+        <tr><th>Firefox</th><td class="state">Coming soon</td></tr>
+        <tr><th>Safari</th><td class="state">Coming later</td></tr>
+      </table>
+
+      <h2>Your words stay yours</h2>
+      <p>
+        SansTypo has no server. The app checks your text on your own machine, and the extension hands text only to the app on your computer, over a
+        connection that cannot leave it. Password fields are never read. <a href="privacy.html">Read the privacy policy.</a>
+      </p>
+
+      <h2 id="support">Support</h2>
+      <p>
+        Found something broken, or something that reads wrong? <a href="https://github.com/waheedbolen/sanstypo-site/issues">Open an issue</a> and say what you saw. Include your system and,
+        if the app misbehaved, its log file — the app’s About screen says where that is.
+      </p>
+
+      <footer>
+        <span>SansTypo</span>
+        <a href="privacy.html">Privacy</a>
+        <a href="https://github.com/waheedbolen/sanstypo-site/issues">Support</a>
+      </footer>
+    </div>
+  </body>
+</html>
